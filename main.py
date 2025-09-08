@@ -1,14 +1,12 @@
-print("Hello World")
-
-print("So this is my first time using Version Control")
+print("Ini Adalah Code dari Tugas Pertemuan 1")
 
 """
-Algoritma & Analisis – 3 Mini-Case
+Algoritma & Analisis – 3 Mini-Case (FIXED, Windows-safe)
 1. Pencarian Buku (Linear vs Binary Search)
 2. Rute Tercepat Gedung (BFS pada graf kecil)
 3. Validasi NIM (10 digit numerik)
 -------------------------------------------------
-Run: python mini_case_algoritma.py
+Run: python mini_case_algoritma_fixed.py
 """
 
 import time
@@ -97,7 +95,8 @@ def demo_bfs():
     print("Graf kampus (simplified):")
     for k, v in g.items():
         print(f"  {k} -> {v}")
-    print(f"Jalur tercepat {start} → {goal}: {' → '.join(jalur)}")
+    # FIXED: pakai "->" alih-alih "→"
+    print(f"Jalur tercepat {start} -> {goal}: {' -> '.join(jalur)}")
 
 # ------------------------------------------------------------------
 # 3. Validasi NIM – cek 10 digit numerik
@@ -110,7 +109,7 @@ def demo_valid():
     print("\n=== 3. VALIDASI NIM ===")
     uji = ["1030320001", "103032AB01", "123", "10303200012"]
     for n in uji:
-        print(f"{n} → {'VALID' if valid_nim(n) else 'TIDAK VALID'}")
+        print(f"{n} -> {'VALID' if valid_nim(n) else 'TIDAK VALID'}")
 
 # ------------------------------------------------------------------
 # Main
